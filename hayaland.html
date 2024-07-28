@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayaland</title>
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="flex flex-col items-center min-h-screen gap-6 bg-blue-200">
+    <nav class="w-full">
+      <h1 class="h-10 bg-white">bar1</h1>
+      <h1 class="h-10 bg-black text-white">bar2</h1>
+    </nav>
+    <section class="bg-green-200 w-full">
+      <div class="flex justify-evenly items-center">
+        <button
+          id="prev"
+          class="h-14 w-14 bg-gray-200 text-gray-800 rounded-full"
+        >
+          ‹
+        </button>
+        <div id="carousel" class="overflow-hidden rounded-lg w-[70%]">
+          <div
+            class="carousel-inner flex transition-transform duration-500 ease-in-out"
+          >
+            <img src="1.png" alt="Image 1" class="carousel-item w-full" />
+            <img src="2.png" alt="Image 2" class="carousel-item w-full" />
+            <img src="3.png" alt="Image 3" class="carousel-item w-full" />
+            <img src="4.png" alt="Image 4" class="carousel-item w-full" />
+          </div>
+        </div>
+
+        <button
+          id="next"
+          class="h-14 w-14 bg-gray-200 text-gray-800 rounded-full"
+        >
+          ›
+        </button>
+      </div>
+    </section>
+    <section class="bg-red-200 flex flex-col items-center w-full gap-8">
+      <h1 class="text-4xl font-extrabold pt-6">
+        デバイスのことは`、ハヤランドにお任せください。
+      </h1>
+      <div class="flex items-center justify-center gap-6">
+        <div
+          class="flex flex-col bg-black lg:w-[340px] w-[300px] items-center text-white py-4 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-200"
+        >
+          <h1 class="text-center">Card Title</h1>
+          <img
+            class="h-60 w-60"
+            src="./public/hayaru1.svg"
+            alt="Placeholder Image"
+          />
+          <div class="flex justify-between px-6 gap-4 pb-5">
+            <div class="flex flex-col items-center">
+              <img
+                class="h-[60px] w-[60px]"
+                src="./public/4.svg"
+                alt="Icon 1"
+              />
+              <button
+                class="border-2 border-white w-32 h-10 rounded-xl hover:bg-white hover:text-black"
+              >
+                Item 1
+              </button>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                class="h-[60px] w-[60px]"
+                src="./public/3.svg"
+                alt="Icon 2"
+              />
+              <button
+                class="border-2 border-white w-32 h-10 rounded-xl hover:bg-white hover:text-black"
+              >
+                Item 2
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col bg-black lg:w-[340px] w-[300px] items-center text-white py-4 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-200"
+        >
+          <h1 class="text-center">Card Title</h1>
+          <img
+            class="h-60 w-60"
+            src="./public/hayaru2.svg"
+            alt="Placeholder Image"
+          />
+          <div class="flex justify-between px-6 gap-4 pb-5">
+            <div class="flex flex-col items-center">
+              <img
+                class="h-[60px] w-[60px]"
+                src="./public/5.svg"
+                alt="Icon 1"
+              />
+              <button
+                class="border-2 border-white w-32 h-10 rounded-xl hover:bg-white hover:text-black"
+              >
+                Item 1
+              </button>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                class="h-[60px] w-[60px]"
+                src="./public/6.svg"
+                alt="Icon 2"
+              />
+              <button
+                class="border-2 border-white w-32 h-10 rounded-xl hover:bg-white hover:text-black"
+              >
+                Item 2
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-red-200 flex flex-col items-center w-full gap-8">
+      <h1 class="text-4xl font-extrabold pt-6">
+        ハヤランドで買うと、いいことあります。​
+      </h1>
+      <div class="flex items-center justify-center gap-6">
+        <div
+          class="flex flex-col w-[260px] h-[400px] text-black py-4 rounded-3xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-200"
+        >
+          <div class="flex flex-col h-full">
+            <div
+              class="flex h-[50%] bg-black rounded-t-2xl justify-center items-center"
+            >
+              <img
+                class="h-[130px] w-[130px]"
+                src="./public/7.svg"
+                alt="Description"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-evenly h-[50%] bg-gray-200 rounded-b-2xl text-center px-4"
+            >
+              <p class="font-bold">最短で翌日にお届け​</p>
+              <p>お好みのデバイスをより速く​ より簡単に受け取れます。</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-[260px] h-[400px] text-black py-4 rounded-3xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-200"
+        >
+          <div class="flex flex-col h-full">
+            <div
+              class="flex h-[50%] bg-black rounded-t-2xl justify-center items-center"
+            >
+              <img
+                class="h-[130px] w-[130px]"
+                src="./public/8.svg"
+                alt="Description"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-evenly h-[50%] bg-gray-200 rounded-b-2xl text-center px-4"
+            >
+              <p class="font-bold">透明な機能検査で品質保証​​</p>
+              <p>ハヤランドの中古スマホは​ 魅力的な品質です。</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-[260px] h-[400px] text-black py-4 rounded-3xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-200"
+        >
+          <div class="flex flex-col h-full">
+            <div
+              class="flex h-[50%] bg-black rounded-t-2xl justify-center items-center"
+            >
+              <img
+                class="h-[130px] w-[130px]"
+                src="./public/9.svg"
+                alt="Description"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-evenly h-[50%] bg-gray-200 rounded-b-2xl text-center px-4"
+            >
+              <p class="font-bold">サービスもサポートもお任せ​​</p>
+              <p>中古品には1年間の保証が付き​ お客様をサポートします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-red-200 flex flex-col items-center gap-8 w-[75%]">
+      <div class="flex justify-center gap-6">
+        <img class="h-[600px] w-[600px]" src="./public/10.svg" alt="" />
+        <div class="flex flex-col  justify-evenly py-20">
+          <h1 class="text-2xl font-extrabold pt-6">
+            デバイスを売って​ <br />
+            アップグレードしませんか？
+          </h1>
+         <div>
+  <p>買取手数料はすべて無料​</p>
+  <hr class="border-gray-500 my-3 mr-8">
+  <p>ご自宅ですべて完結​</p>
+  <hr class="border-gray-500 my-3 mr-8">
+  <p>発送から最短48時間で振込​</p>
+  <hr class="border-gray-500 my-3 mr-8">
+</div>
+
+          <button
+            class=" bg-black text-white w-36 h-10 rounded-xl hover:bg-white hover:text-black"
+          >
+            デバイスを売る​
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
