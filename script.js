@@ -131,3 +131,15 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
     mobileMenu.classList.add("scale-y-0");
   }
 });
+
+  window.addEventListener('scroll', function() {
+    const blackDiv = document.getElementById('black-div');
+    const offset = blackDiv.offsetHeight;
+
+    if (window.scrollY > offset) {
+      blackDiv.classList.add('fixed','top-0');
+    } else {
+      blackDiv.classList.remove( "fixed", "top-0");
+    }
+  });
+
