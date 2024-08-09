@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply font-sans;
+@font-face {
+    font-family: "My Custom Font";
+    src: url('./public/SF\ Pro\ Japan\ Regular.woff2.otf') format("opentype");
+    ;
+
+}
+
+body{
+  font-family: "My Custom Font";
 }

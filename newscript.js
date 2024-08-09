@@ -1,19 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    const blackDiv = document.getElementById("black-div");
-    const offset = blackDiv.offsetHeight + 35;
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
 
-    if (window.scrollY > offset) {
-      blackDiv.classList.add("fixed", "top-0");
-    } else {
-      blackDiv.classList.remove("fixed", "top-0");
-    }
-  });
-});
-
-
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
 function initCarousel() {
+  console.log("heree");
+
   const carousel = document.getElementById("carousel");
   const inner = carousel.querySelector(".carousel-inner");
   const prevButton = document.getElementById("prev");
@@ -121,6 +117,7 @@ function initCarousel() {
   updateCarousel();
   startAutoSlide();
 }
+
 function initQuestionsCarousel() {
   const carousel = document.getElementById("carousel-questions");
   const inner = carousel.querySelector(".carousel-inner-questions");
@@ -133,7 +130,6 @@ function initQuestionsCarousel() {
     currentTranslateX,
     isDragging = false;
   let index = 0;
-  let autoSlideInterval;
 
   function updateCarousel() {
     const totalItems = inner.children.length;
@@ -145,17 +141,6 @@ function initQuestionsCarousel() {
       dot.classList.toggle("bg-black", i === newIndex);
       dot.classList.toggle("bg-gray-300", i !== newIndex);
     });
-  }
-
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(() => {
-      index = (index + 1) % inner.children.length;
-      updateCarousel();
-    }, 3000); // Change the interval time as needed
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
   }
 
   // Mouse drag events
@@ -194,7 +179,6 @@ function initQuestionsCarousel() {
 
     updateCarousel();
     stopAutoSlide();
-    startAutoSlide();
   }
 
   carousel.addEventListener("mousedown", handleDragStart);
@@ -228,9 +212,22 @@ function initQuestionsCarousel() {
   });
 
   // Initialize carousel
-  updateCarousel();
-  startAutoSlide();
+  // updateCarousel();
+  // startAutoSlide();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    const blackDiv = document.getElementById("black-div");
+    const offset = blackDiv.offsetHeight + 35;
+
+    if (window.scrollY > offset) {
+      blackDiv.classList.add("fixed", "top-0", "w-full", "z-50");
+    } else {
+      blackDiv.classList.remove("fixed", "top-0", "w-full", "z-50");
+    }
+  });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   initCarousel();
@@ -273,11 +270,23 @@ window.addEventListener("resize", () => {
   }
 });
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+const input = document.getElementById("search-input");
+const itemsContainer = document.getElementById("items-container");
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+input.addEventListener("click", () => {
+  if (itemsContainer.classList.contains("max-h-0")) {
+    itemsContainer.classList.remove("max-h-0");
+    itemsContainer.classList.add("max-h-screen");
+  } else {
+    itemsContainer.classList.remove("max-h-screen");
+    itemsContainer.classList.add("max-h-0");
+  }
+  if (input.classList.contains("rounded-xl")) {
+    input.classList.remove("rounded-xl");
+    input.classList.add("rounded-t-xl");
+  }
+  else{
+    input.classList.add("rounded-xl");
+    input.classList.remove("rounded-t-xl");
+  }
+});
